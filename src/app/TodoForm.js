@@ -18,9 +18,9 @@ export default function TodoForm({ todoArr }) {
 
     return (
         <Grid
-         direction="column"
-         alignItems="center"
-         container
+            direction="column"
+            alignItems="center"
+            container
         >
 
             <form 
