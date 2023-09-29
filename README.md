@@ -1,1 +1,1 @@
-This is my first app made in react, it's using MUI Material and NEXTjs.
+This is my first web app utilizing React, Nextjs and MUI material.
