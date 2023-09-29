@@ -17,8 +17,8 @@ export default function Home() {
       alignItems="center"
       container
    >
-      <TodoForm todoArr={ todoArr } setTodoAr={} />
-      <TodoList todoArr={ todoArr } setTodoArr />
+      <TodoForm todoArr={ todoArr } setTodoArr={setTodoArr} />
+      <TodoList todoArr={ todoArr } setTodoArr={setTodoArr} />
    </Grid>
   )
 }

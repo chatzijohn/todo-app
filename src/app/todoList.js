@@ -9,7 +9,9 @@ import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-export default function TodoList({ todoArr }) {
+export default function TodoList({setTodoArr, todoArr}) {
+
+
 
     const deleteTodo = (id) => {
         const newTodoArr = todoArr.filter(todo => {return todo.id != id})
