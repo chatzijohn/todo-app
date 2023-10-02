@@ -1,11 +1,9 @@
 "use client"
 import { useState } from "react";
+import { Grid } from "@mui/material";
 import TodoForm from "@/app/TodoForm";
 import TodoList from "@/app/TodoList";
-import { Grid } from "@mui/material";
-// import { Grid } from "@mui/material";
-// import styles from '@/todoForm.module.scss'
-
+import TodoCounter from "@/app/TodoCounter";
 
 export default function Home() {
 
@@ -17,6 +15,7 @@ export default function Home() {
       alignItems="center"
       container
    >
+      <TodoCounter todoArr={ todoArr } setTodoArr={setTodoArr} />
       <TodoForm todoArr={ todoArr } setTodoArr={setTodoArr} />
       <TodoList todoArr={ todoArr } setTodoArr={setTodoArr} />
    </Grid>

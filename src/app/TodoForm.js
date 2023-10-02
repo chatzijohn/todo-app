@@ -2,8 +2,6 @@ import { TextField, Button, Grid } from "@mui/material";
 import { useForm } from "react-hook-form"
 
 export default function TodoForm({setTodoArr, todoArr}) {
-    
-
 
     const {
         register,
@@ -11,7 +9,6 @@ export default function TodoForm({setTodoArr, todoArr}) {
         formState: { errors, isSubmitting, isDirty, isValid },
         reset,
       } = useForm({ mode: "onChange" });
-
 
     const onSubmit = (todoTask) => {
         setTodoArr([...todoArr, {id: crypto.randomUUID(),title: todoTask.todoTask ,completed: false}])

@@ -12,8 +12,6 @@ import { Grid } from '@mui/material';
 
 export default function TodoList({setTodoArr, todoArr}) {
 
-
-
     const deleteTodo = (id) => {
         const newTodoArr = todoArr.filter(todo => {return todo.id != id})
         setTodoArr(newTodoArr)
@@ -30,12 +28,17 @@ export default function TodoList({setTodoArr, todoArr}) {
       }
 
     return (
-      <Grid>
+      <Grid
+        direction="column"
+        alignItems="center"
+        container
+      >
         <List>
           {todoArr.length === 0 && <Typography variant="h6" >You have nothing to do.</Typography>}
           {todoArr.map(todo => {
           return(
               <ListItem 
+              sx={{ minWidth: "300px" }}
               secondaryAction={
                   <IconButton edge="end" onClick={() => deleteTodo(todo.id)}>
                   <DeleteIcon />
