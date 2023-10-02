@@ -10,14 +10,16 @@ export default function Home() {
   const [todoArr, setTodoArr] = useState([]);
 
   return (
-   <Grid
-      direction="column"
-      alignItems="center"
-      container
-   >
-      <TodoCounter todoArr={ todoArr } setTodoArr={setTodoArr} />
-      <TodoForm todoArr={ todoArr } setTodoArr={setTodoArr} />
-      <TodoList todoArr={ todoArr } setTodoArr={setTodoArr} />
-   </Grid>
+    <>
+      <Grid
+        direction="column"
+        alignItems="center"
+        container
+      >
+        <TodoCounter todoArr={ todoArr } setTodoArr={setTodoArr} />
+        <TodoForm todoArr={ todoArr } setTodoArr={setTodoArr} />
+        <TodoList todoArr={ todoArr } setTodoArr={setTodoArr} />
+      </Grid>
+    </>
   )
 }
