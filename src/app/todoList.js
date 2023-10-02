@@ -8,6 +8,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { Grid } from '@mui/material';
 
 export default function TodoList({setTodoArr, todoArr}) {
 
@@ -29,6 +30,7 @@ export default function TodoList({setTodoArr, todoArr}) {
       }
 
     return (
+      <Grid>
         <List>
           {todoArr.length === 0 && <Typography variant="h6" >You have nothing to do.</Typography>}
           {todoArr.map(todo => {
@@ -57,5 +59,6 @@ export default function TodoList({setTodoArr, todoArr}) {
           )
           })}
         </List>
+      </Grid>
     )
 } 
