@@ -7,8 +7,6 @@ export default function TodoCounter({ todoArr}) {
     return (
         <Box 
             sx={{ m: 1, gap: 1, display: 'flex' , flexDirection: 'row' }}
-            
-            container
         >
             <Typography>
                 Total Tasks: {todoTotalCount}

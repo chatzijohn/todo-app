@@ -31,7 +31,6 @@ export default function TodoList({setTodoArr, todoArr}) {
       <Box
         direction="column"
         alignItems="center"
-        container
       >
         <List>
           {todoArr.length === 0 && <Typography variant="h6" >You have nothing to do.</Typography>}

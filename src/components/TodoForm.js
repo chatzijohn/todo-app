@@ -19,7 +19,6 @@ export default function TodoForm({setTodoArr, todoArr}) {
         <Box
             direction="column"
             alignItems="center"
-            container
         >
 
             <form 
