@@ -1,6 +1,6 @@
-// "use client"
-import { Drawer, Box, ListItemButton, ListItemText, Typography, Toolbar, List, ListItem } from "@mui/material";
-import { Link } from 'next/link'
+"use client"
+import { Drawer, ListItemButton, ListItemText, Typography, Toolbar, List, ListItem, Box } from "@mui/material";
+import Link from 'next/link'
 
 
 export default function SideNav() {
@@ -8,11 +8,12 @@ export default function SideNav() {
     const drawerWidth = '250px'
     
     return (
+        <div>
             <Box>    
                 <Drawer 
                     variant='persistent'
                     anchor='left' 
-                    open="true"
+                    open={true}
                     sx={{
                         '& .MuiDrawer-paper': {
                         boxSixing: 'border-box',
@@ -20,39 +21,31 @@ export default function SideNav() {
                         }
                     }}
                 >
-                    <Box
-                        textAlign="center"
-                    >
-                        <Toolbar>
-                            <Typography variant="h6">
-                                Navbar
-                            </Typography>
-                        </Toolbar>
-                        <List>
-                            <ListItem>
-                                <ListItemButton >                
-                                    <Link href="/">
-                                        <ListItemText primary="Home"/>
-                                    </Link>
-                                </ListItemButton>
-                            </ListItem>
-                            <ListItem>
-                                <ListItemButton >                
-                                    <Link href="/todo">
-                                        <ListItemText primary="Todo"/>
-                                    </Link>
-                                </ListItemButton>
-                            </ListItem>
-                            <ListItem>
-                                <ListItemButton >                
-                                <Link href="/datagrid">
-                                        <ListItemText primary="Datagrid"/>
-                                    </Link>
-                                </ListItemButton>
-                            </ListItem>
-                        </List>       
-                    </Box>
+                    <Toolbar>
+                        <Typography variant="h6">
+                            Navbar
+                        </Typography>
+                    </Toolbar>
+                    <List>
+                        <Link href="/" passHref legacyBehavior>
+                            <ListItemButton component="a">
+                                <ListItemText primary="Home" />
+                            </ListItemButton>
+                        </Link>
+                        <Link href="/todo" passHref legacyBehavior>
+                            <ListItemButton component="a">
+                                <ListItemText primary="Todo" />
+                            </ListItemButton>
+                        </Link>
+                        <Link href="/datagrid" passHref legacyBehavior>
+                            <ListItemButton component="a">
+                                <ListItemText primary="Datagrid" />
+                            </ListItemButton>
+                        </Link>
+                    </List>
                 </Drawer>
             </Box>
+        </div>
     )
 }
+
