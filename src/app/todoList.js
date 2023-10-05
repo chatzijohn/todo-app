@@ -8,7 +8,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Grid } from '@mui/material';
+import { Box } from '@mui/material';
 
 export default function TodoList({setTodoArr, todoArr}) {
 
@@ -28,7 +28,7 @@ export default function TodoList({setTodoArr, todoArr}) {
       }
 
     return (
-      <Grid
+      <Box
         direction="column"
         alignItems="center"
         container
@@ -47,21 +47,21 @@ export default function TodoList({setTodoArr, todoArr}) {
               key={todo.id}
               disablePadding
               >
-              <ListItemButton onClick={_ => toggleTodo(todo.id)}>                
-                  <ListItemIcon>
-                  <Checkbox
-                      edge="start"
-                      checked={todo.completed}
-                      tabIndex={-1}
-                      disableRipple
-                  />
-                  </ListItemIcon>
-                  <ListItemText primary={todo.title} />
-              </ListItemButton>
+                <ListItemButton onClick={_ => toggleTodo(todo.id)}>                
+                    <ListItemIcon>
+                    <Checkbox
+                        edge="start"
+                        checked={todo.completed}
+                        tabIndex={-1}
+                        disableRipple
+                    />
+                    </ListItemIcon>
+                    <ListItemText primary={todo.title} />
+                </ListItemButton>
               </ListItem>
           )
           })}
         </List>
-      </Grid>
+      </Box>
     )
 } 

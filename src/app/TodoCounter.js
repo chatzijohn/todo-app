@@ -1,12 +1,13 @@
-import { Grid, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 
 export default function TodoCounter({ todoArr}) {
 
     const todoCompletedCount = todoArr.filter(todo => todo.completed == true).length
     const todoTotalCount = todoArr.length
     return (
-        <Grid 
-            sx={{ gap: 1 }}
+        <Box 
+            sx={{ m: 1, gap: 1, display: 'flex' , flexDirection: 'row' }}
+            
             container
         >
             <Typography>
@@ -15,7 +16,7 @@ export default function TodoCounter({ todoArr}) {
             <Typography>
                 Completed Tasks: {todoCompletedCount}
             </Typography>
-        </Grid>
+        </Box>
         )
     
 }

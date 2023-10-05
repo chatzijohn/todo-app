@@ -1,4 +1,4 @@
-import { TextField, Button, Grid } from "@mui/material";
+import { TextField, Button, Box } from "@mui/material";
 import { useForm } from "react-hook-form"
 
 export default function TodoForm({setTodoArr, todoArr}) {
@@ -16,7 +16,7 @@ export default function TodoForm({setTodoArr, todoArr}) {
        }
 
     return (
-        <Grid
+        <Box
             direction="column"
             alignItems="center"
             container
@@ -39,6 +39,6 @@ export default function TodoForm({setTodoArr, todoArr}) {
                 sx={{ height: "100%" }}
                 >+</Button>
             </form>
-        </Grid>
+        </Box>
     )
 }

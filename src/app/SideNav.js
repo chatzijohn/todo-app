@@ -1,31 +1,47 @@
-import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
+"use client"
+import { Drawer, Box, ListItemButton, ListItemText, Typography, Toolbar, List, ListItem } from "@mui/material";
+import { useRouter } from 'next/router'
 
-const topBar = (
-    <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="relative">
-            <Toolbar>
-                <IconButton
-                    color="inherit"
-                    aria-aria-label="open drawer"
-                    edge="start"
-                    sx={{ mr: 2, display: { sm:'none' } }}
-                    // onClick={handleDrawerToggle}
-                >
-                    <MenuIcon/>
-                </IconButton>
-                <Typography variant="h6" noWrap component="div">
-                    Todo App
-                </Typography>
-            </Toolbar>
-        </AppBar>
-    </Box>
-)
 
 export default function SideNav() {
+
+    const drawerWidth = '250px'
+    
     return (
-        <>
-            {topBar}
-        </>
+            <Box>    
+                <Drawer 
+                    variant='persistent'
+                    anchor='left' 
+                    open="true"
+                    sx={{
+                        '& .MuiDrawer-paper': {
+                        boxSixing: 'border-box',
+                        width:    drawerWidth,
+                        }
+                    }}
+                >
+                    <Box
+                        textAlign="center"
+                    >
+                        <Toolbar>
+                            <Typography variant="h6">
+                                Navbar
+                            </Typography>
+                        </Toolbar>
+                        <List>
+                            <ListItem>
+                                <ListItemButton >                
+                                    <ListItemText primary="Home"/>
+                                </ListItemButton>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemButton >                
+                                    <ListItemText primary="Datagrid"/>
+                                </ListItemButton>
+                            </ListItem>
+                        </List>       
+                    </Box>
+                </Drawer>
+            </Box>
     )
 }

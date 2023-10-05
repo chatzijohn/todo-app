@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
      
       <body>
-        <SideNav />
+        <SideNav />   
         {children}
       </body>
     </html>
