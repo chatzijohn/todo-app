@@ -2,24 +2,19 @@
 import { Drawer, ListItemButton, ListItemText, Divider, Typography, Toolbar, List, ListItem, Box } from "@mui/material";
 import Link from 'next/link'
 
-
 export default function SideNav() {
 
     const drawerWidth = '200px'
     
     return (
-        <Box component="nav">    
+        <Box component="nav" width={drawerWidth}>    
             <Drawer 
-                position='fixed'
                 variant='persistent'
                 anchor='left' 
                 open={true}
                 sx={{
-                    '& .MuiDrawer-paper': {
-                    boxSizing: 'border-box',
-                    width:    drawerWidth,
-                    }
-                }}
+                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                  }}
             >
                 <Toolbar />
                 <Divider />
