@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { Box } from "@mui/material";
 
-import TodoForm from "@/app/TodoForm";
-import TodoList from "@/app/TodoList";
-import TodoCounter from "@/app/TodoCounter";
+import TodoForm from "@/components/TodoForm";
+import TodoList from "@/components/TodoList";
+import TodoCounter from "@/components/TodoCounter";
 
 export default function Home() {
 

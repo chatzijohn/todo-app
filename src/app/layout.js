@@ -1,4 +1,4 @@
-import SideNav from "@/app/SideNav"
+import SideNav from "@/components/SideNav"
 
 export const metadata = {
   title: 'My todo app',

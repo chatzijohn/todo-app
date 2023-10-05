@@ -1,6 +1,6 @@
-"use client"
+// "use client"
 import { Drawer, Box, ListItemButton, ListItemText, Typography, Toolbar, List, ListItem } from "@mui/material";
-import { useRouter } from 'next/router'
+import { Link } from 'next/link'
 
 
 export default function SideNav() {
@@ -31,12 +31,23 @@ export default function SideNav() {
                         <List>
                             <ListItem>
                                 <ListItemButton >                
-                                    <ListItemText primary="Home"/>
+                                    <Link href="/">
+                                        <ListItemText primary="Home"/>
+                                    </Link>
                                 </ListItemButton>
                             </ListItem>
                             <ListItem>
                                 <ListItemButton >                
-                                    <ListItemText primary="Datagrid"/>
+                                    <Link href="/todo">
+                                        <ListItemText primary="Todo"/>
+                                    </Link>
+                                </ListItemButton>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemButton >                
+                                <Link href="/datagrid">
+                                        <ListItemText primary="Datagrid"/>
+                                    </Link>
                                 </ListItemButton>
                             </ListItem>
                         </List>       
