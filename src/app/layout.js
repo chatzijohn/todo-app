@@ -8,15 +8,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{ margin: '0px', minHeight: "100vh"}}>
-       <Box 
+      <body style={{ margin: '0px'}}>
+       <Box
         display="flex"
-        width="100%"
-        height="100%"
-        justifyContent="space-around"
+        width="100vw"
+        height="100vh"
        >
           <SideNav />
-          <Box flexGrow={1}>
+          <Box flexGrow={1} >
             {children}
           </Box>
        </Box>
