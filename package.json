@@ -19,5 +19,8 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.46.2",
     "sass": "^1.68.0"
+  },
+  "devDependencies": {
+    "@mui/x-data-grid": "^6.16.1"
   }
 }

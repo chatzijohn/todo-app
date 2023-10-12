@@ -15,8 +15,11 @@ export default function Todo() {
       <Box
         sx={{
           display: 'flex',
+          height: "80vh",
+          width: "100vw",
           flexDirection: 'column',
-          alignItems: 'center'
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         <TodoCounter todoArr={ todoArr } />
