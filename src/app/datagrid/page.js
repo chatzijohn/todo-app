@@ -39,7 +39,7 @@ const columns = [
 
 const rows = [
     { id: 1, lastName: 'Kyrikos', firstName: 'ΦΘΜ', age: 36 },
-    { id: 2, lastName: 'Papakostantinou', firstName: 'Konstantinos', age: 29 },
+    { id: 2, lastName: 'Papakostantinou', firstName: 'Konstantinos', age: 28 },
     { id: 3, lastName: 'Demetriou', firstName: 'Elias', age: 26 },
     { id: 4, lastName: 'Wagdy', firstName: 'Nadi', age: 25 },
     { id: 5, lastName: 'Chatzigiannis', firstName: 'Panagiotis', age: 24 },
