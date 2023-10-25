@@ -1,8 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { HYDRATE } from 'next-redux-wrapper'
 
-const api = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://192.168.1.135:5050' }),
+export const todoApi = createApi({
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://192.168.1.135:5050/api' }),
   extractRehydrationInfo(action, {reducerPath}) {
     if (action.type === HYDRATE) {
         return action.payload[reducerPath]
@@ -10,9 +10,16 @@ const api = createApi({
   },
   endpoints: (builder) => ({
     getAllTasks: builder.query({
-      query: () => '/api/tasks',
+      query: () => 'tasks',
     }),
   }),
 })
 
-export const { useGetAllTasksQuerry } = api
+
+// Export hooks for usage in functional components
+export const {
+  useGetAllTasksQuery,
+} = todoApi
+
+// export endpoints for use in SSR
+export const { getAllTasks } = todoApi.endpoints
