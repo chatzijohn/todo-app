@@ -1,6 +1,7 @@
 import SideNav from "@/components/SideNav"
 import { Box } from "@mui/material"
 
+
 export const metadata = {
   title: 'My app',
 }
